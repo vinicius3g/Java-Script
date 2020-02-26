@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Java Script</title>
+</head>
+<body>
+    <div class="app">
+        <!-- <input class="input" type="text" placeholder="text">
+        <button class="button" onclick = touch()>Touch Me</button> -->
+    </div>
+
+
+    <script>
+// criação de elementos por javascript
+
+        var linkElement = document.createElement('a');
+        //criação  do atributo do elemento criado acima
+        linkElement.setAttribute('href','http://rocketseat.com.br')
+        linkElement.setAttribute('title','site da rocketseat')
+        linkElement.setAttribute('class','site')
+        //criação de texto para o elemento criado
+        var textElement = document.createTextNode("acesse");
+        //inserção do texto dentro do elemento
+        linkElement.appendChild(textElement)
+
+        //inserção da tag criado dentro do documento 
+        var container = document.querySelector(".app")
+        container.appendChild(linkElement)
+
+
+
+
+    // interação com a doom passando eventos por intermedio somente do javascript com queryselector        
+        //    var inputElement = document.querySelector(".input")
+        //    console.log(inputElement)
+
+        //    var btnElement = document.querySelector(".button")
+
+        //   btnElement.onclick = function () {
+        //     var text = inputElement.value;
+        //     alert(text)
+        //}
+    </script>  
+</body>
+</html>
