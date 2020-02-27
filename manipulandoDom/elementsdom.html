@@ -8,8 +8,8 @@
 </head>
 <body>
     <div class="app">
-        <!-- <input class="input" type="text" placeholder="text">
-        <button class="button" onclick = touch()>Touch Me</button> -->
+        <input class="input" type="text" placeholder="text">
+      <!--   <button class="button" onclick = touch()>Touch Me</button> -->
     </div>
 
 
@@ -29,6 +29,9 @@
         //inserção da tag criado dentro do documento 
         var container = document.querySelector(".app")
         container.appendChild(linkElement)
+
+        var inputElement = document.querySelector(".input")
+        container.removeChild(inputElement)
 
 
 
