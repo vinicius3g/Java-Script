@@ -4,7 +4,7 @@
 // aparecer na tela.
 var  botao = document.querySelector('button.button')
 console.log(botao)
-botao.onclick = function() {
+botao.onclick = () => {
     console.log(onclick)
     var square = document.createElement('div')
     square.setAttribute('class','square')
@@ -14,30 +14,26 @@ botao.onclick = function() {
 
     var app = document.querySelector('div.app')
     app.appendChild(square)
-}
-
-
 
 // 2º exercício
 // Utilizando o resultado do primeiro desafio, toda vez que o usuário passar o mouse por cima de
 // algum quadrado troque sua cor para uma cor aleatória gerada pela função abaixo:
-var quadrado = document.querySelector('div.square')
-console.log(quadrado)
-quadrado.onmouseenter = function() {
-    return alert("funcionando")
-}
 
-function getRandomColor() {
-    var letters = "0123456789ABCDEF";
-    var color = "#";
-
-    for (var i = 0; i < 6; i++) {
-         color += letters[Math.floor(Math.random() * 16)];
-    }
+    getRandomColor = () => {
+        var letters = "0123456789ABCDEF";
+        var color = "#";
     
-    return color;
+        for (var i = 0; i < 6; i++) {
+             color += letters[Math.floor(Math.random() * 16)];
+        }
+        
+        return color;
+    }
+    square.onmouseover = () => {
+        square.style.backgroundColor = getRandomColor()
+    }
 }
-var newColor = getRandomColor(); // #E943F0
+
 
 // 3º exercício
 // A partir do seguinte vetor:
@@ -46,6 +42,10 @@ var newColor = getRandomColor(); // #E943F0
 // ● Diego
 // ● Gabriel
 // ● Lucas
+
+
+
+
 // 4º exercício
 // Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
 /* <input type="text" name="nome">
